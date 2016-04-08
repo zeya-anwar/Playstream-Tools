@@ -16,7 +16,7 @@ custom_tags varchar(1000) null
 );
 copy log_in from 's3://<archive location>/com.playfab.player_logged_in/<year>/<month>/<day>/'
 credentials 'aws_iam_role=<S3 Reader role>'
-format as json 's3://<manifest-location>
+format as json 's3://'pf-playstream-redshift-manifests/com.playfab/player_logged_in'
 timeformat as 'auto'
 gzip
 maxerror 50
