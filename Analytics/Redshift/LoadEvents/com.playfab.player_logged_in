@@ -1,0 +1,24 @@
+create table log_in (
+event_name varchar(200) not null,
+platform varchar(200) not null,
+platform_user_id varchar(200) not null,
+entity_type varchar(200) not null,
+source varchar(200) not null,
+title_id varchar(200) not null,
+source_type varchar(200) not null,
+event_id varchar(200) not null,
+entity_id varchar(200) not null,
+event_namespace varchar(200) not null,
+history varchar(1000) null,
+ts timestamp not null,
+reserved varchar(1000) null,
+custom_tags varchar(1000) null
+);
+copy log_in from 's3://<archive location>/com.playfab.player_logged_in/<year>/<month>/<day>/'
+credentials 'aws_iam_role=<S3 Reader role>'
+format as json 's3://<manifest-location>
+timeformat as 'auto'
+gzip
+maxerror 50
+trimblanks;
+select top 10 * from log_in_2
