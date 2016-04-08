@@ -21,4 +21,4 @@ TIMEFORMAT AS 'auto'
 GZIP
 MAXERROR 10
 TRIMBLANKS;
-select top 10 * from log_in
+SELECT TOP 10 * FROM log_in
