@@ -1,0 +1,19 @@
+{
+	"jsonpaths":
+	[
+		"$.EventName",
+		"$.Platform",
+		"$.PlatformUserId",
+		"$.EntityType",
+		"$.Source",
+		"$.TitleId",
+		"$.SourceType",
+		"$.EventId",
+		"$.EntityId",
+		"$.EventNamespace",
+		"$.History",
+		"$.Timestamp",
+		"$.Reserved",
+		"$.CustomTags"
+	]
+}
